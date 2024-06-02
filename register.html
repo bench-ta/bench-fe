@@ -78,13 +78,33 @@
 
               <form id="formAuthentication" class="mb-3" action="index.html" method="GET">
                 <div class="mb-3">
+                  <label for="Nama Lengkap" class="form-label">Nama Lengkap </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="fullName"
+                    name="Nama Lengkap"
+                    placeholder="Masukkan Nama Lengkap "
+                    autofocus />
+                </div>
+                <div class="mb-3">
                   <label for="email" class="form-label">Email </label>
                   <input
                     type="text"
                     class="form-control"
                     id="email"
-                    name="email-username"
-                    placeholder="Masukkan email"
+                    name="email"
+                    placeholder="Masukkan email "
+                    autofocus />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Username </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="username"
+                    name="username"
+                    placeholder="Masukkan username"
                     autofocus />
                 </div>
                 <div class="mb-3 form-password-toggle">
@@ -103,19 +123,17 @@
                 </div>
                
                 <div class="mb-3">
-                  <button class="btn btn-primary d-grid w-100" id="masukkButton" type="button">Masuk</button>
+                  <button class="btn btn-primary d-grid w-100" id="daftarButton" type="button">Masuk</button>
                 </div>
               </form>
 
               <p class="text-center">
-                <span>Anda Baru Disini?</span>
-                <a href="register.html">
-                  <span>Buat Akun </span>
+                <span>Anda Sudah Punya Akun?</span>
+                <a href="index.html">
+                  <span>Masuk </span>
                 </a>
               </p>
 
-            
-              
             </div>
           </div>
           <!-- /Register -->
@@ -136,8 +154,8 @@
     <script src="assets/vendor/libs/i18n/i18n.js"></script>
     <script src="assets/vendor/libs/typeahead-js/typeahead.js"></script>
     <script src="assets/vendor/js/menu.js"></script>
+    <script type="module" src="./js/daftar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script type="module" src="./js/masuk.js"></script>
 
     <!-- endbuild -->
 
