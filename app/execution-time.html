@@ -376,53 +376,34 @@
                             </h6>
                             <hr class="mt-0" />
                           </div>
+                          
                           <div class="col-md-12">
-                            <label
-                              class="form-label"
-                              for="type_test"
-                              aria-disabled="true"
-                              >Tipe Test</label
-                            >
+                            <label class="form-label" for="formValidationName">Nama Javascript</label>
                             <input
-                              type="text"
-                              id="type_test"
-                              class="form-control"
-                              placeholder="Vanilla JS"
-                              name="type_test"
-                              value="execution-time"
-                              disabled="true"
+                                type="text"
+                                id="formValidationName"
+                                class="form-control"
+                                placeholder="Vanilla JS"
+                                name="formValidationName"
+                                autocomplete="off"  
                             />
+                            <div id="suggestionsDropdown" class="custom-dropdown" style="display:none;"></div>
+                        </div>
+                        <div class="col-md-12">
+                          <label class="form-label" for="sumber_kode">Sumber Kode</label>
+                          <div id="sumberKodeContainer">
+                              <textarea class="form-control mb-2" id="sumber_kode_1" name="sumber_kode" rows="3"></textarea>
                           </div>
-                          <div class="col-md-12">
-                            <label class="form-label" for="formValidationName"
-                              >Nama Javascript</label
-                            >
-                            <input
-                              type="text"
-                              id="formValidationName"
-                              class="form-control"
-                              placeholder="Vanilla JS"
-                              name="formValidationName"
-                            />
-                          </div>
-                          <div class="col-md-12">
-                            <label class="form-label" for="sumber_kode"
-                              >Sumber Kode</label
-                            >
-                            <textarea
-                              class="form-control"
-                              id="sumber_kode"
-                              name="sumber_kode"
-                              rows="3"
-                            ></textarea>
-                          </div>
+                          <button type="button" id="addMoreCode" class="btn btn-secondary">Tambah Sumber Kode</button>
+                      </div>
+                      
                           <div class="col-md-12">
                             <label class="form-label" for="jumlah_eksekusi"
                               >Jumlah Eksekusi
                             </label>
                             <input
                               class="form-control"
-                              type="email"
+                              type="number"
                               id="jumlah_eksekusi"
                               name="jumlah_eksekusi"
                               placeholder="Jumlah Eksekusi"
@@ -431,7 +412,8 @@
 
                           <div class="col-12">
                             <button
-                              type="submit"
+                              id="submitButton"
+                              type="button"
                               name="submitButton"
                               class="btn btn-primary"
                             >
@@ -440,6 +422,22 @@
                           </div>
                         </form>
                       </div>
+                      <div class="card mt-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Hasil Pengujian Eksekusi Waktu</h5>
+                            <div class="execution-time-container">
+                                <div class="execution-time-info">
+                                    <span class="execution-time-label">Rata Rata Hasil Eksekusi Waktu:</span>
+                                    <span class="execution-time-value" id="averageExecutionTime">-</span>
+                                </div>
+                                <div class="execution-time-bar-container">
+                                    <div id="executionTimeProgressBar" class="execution-time-progress-bar"></div>
+                                </div>
+                            </div>
+                            <div class="charts-container" id="chartsContainer">
+                            </div>
+                    </div>
+                    
                     </div>
                   </div>
                   <!-- /FormValidation -->
@@ -491,6 +489,7 @@
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
     <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script src="../../assets/vendor/libs/jquery/jquery.js"></script>
     <script src="../../assets/vendor/libs/popper/popper.js"></script>
@@ -500,7 +499,12 @@
     <script src="../../assets/vendor/libs/i18n/i18n.js"></script>
     <script src="../../assets/vendor/libs/typeahead-js/typeahead.js"></script>
     <script src="../../assets/vendor/js/menu.js"></script>
-    <script type="module" src="../js/informasi-diri.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../js/javascript-type.js"></script>
+    <script type="module" src="../js/execution-time/execution-time-add.js"></script>
+    <script type="module" src="../js/execution-time/tambah-sumber-kode.js"></script>
+
+
     <!-- endbuild -->
 
     <!-- Vendors JS -->

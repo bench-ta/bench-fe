@@ -125,4 +125,91 @@
 .layout-demo-info {
   text-align: center;
   margin-top: 1rem;
+}* {
+  box-sizing: border-box;
+}
+
+.form-control, .custom-dropdown {
+  width: 100%; /* Make sure both input and dropdown are full width of their container */
+}
+
+.custom-dropdown {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc; /* Match input field border */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+  margin-top: -1px; /* Negative margin to align perfectly with the input field */
+  border-top: none; /* Remove top border to merge visually with input */
+}
+
+.custom-dropdown div {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
+
+.custom-dropdown div:last-child {
+  border-bottom: none;
+}
+
+.custom-dropdown div:hover {
+  background-color: #f9f9f9;
+}
+
+/* Container for the execution time display */
+.execution-time-container {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #ffffff; /* Light background for better contrast */
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1); /* Soft shadow for depth */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between label and value */
+}
+
+/* Styling for the label and value text */
+.execution-time-info {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Custom styling for the value to make it stand out */
+.execution-time-value {
+  font-size: 22px;
+  color: #007bff; /* Bright blue to attract attention */
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Container for the progress bar */
+.execution-time-bar-container {
+  width: 100%; /* Full width to fill the space */
+  background-color: #e0e0e0; /* Light grey background */
+  border-radius: 10px;
+  overflow: hidden; /* Ensures the inner bar doesn't overlap the border radius */
+  margin-top: 10px;
+}
+
+/* Gradient and animation for the progress bar */
+.execution-time-progress-bar {
+  height: 20px;
+  width: 0%; /* Dynamic update based on value */
+  background: linear-gradient(to right, #4caf50, #8bc34a); /* Green gradient */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Subtle shadow for 3D effect */
+  border-radius: 10px;
+  transition: width 1s ease-in-out; /* Smooth transition for width adjustment */
+}
+.charts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* This will handle the layout alignment */
+  align-items: flex-start;
+}
+canvas {
+  margin-bottom: 20px; /* Space between charts */
 }
