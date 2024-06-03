@@ -324,7 +324,7 @@
                         </a>
                       </li>
                       <li class="menu-item">
-                        <a href="#" class="menu-link" target="_blank">
+                        <a href="memory-usage.html" class="menu-link">
                           <i
                             class="menu-icon tf-icons bx bx-vertical-center"
                           ></i>
@@ -332,7 +332,7 @@
                         </a>
                       </li>
                       <li class="menu-item">
-                        <a href="layouts-fluid.html" class="menu-link">
+                        <a href="asyncronous-benchmark.html" class="menu-link">
                           <i class="menu-icon tf-icons bx bx-fullscreen"></i>
                           <div data-i18n="Asyncronous Benchmark">
                             Asyncronous Benchmark
@@ -340,7 +340,7 @@
                         </a>
                       </li>
                       <li class="menu-item">
-                        <a href="layouts-container.html" class="menu-link">
+                        <a href="page-load.html" class="menu-link">
                           <i
                             class="menu-icon tf-icons bx bx-exit-fullscreen"
                           ></i>
@@ -358,153 +358,94 @@
 
             <!-- Content -->
 
-            <div class="container-xxl flex-grow container-p-y">
-              <!-- Hour chart  -->
-              <div class="card bg-transparent border-0 my-4 shadow-none">
-                <div class="card-body">
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="card">
+                <!-- Pricing Plans -->
+                <div class="row">
+                  <!-- FormValidation -->
                   <div class="col-12">
-                    <h3>Welcome back, Felecia 👋🏻</h3>
-                    <div class="col-12">
-                      <p></p>
-                    </div>
-                    <div class="d-flex justify-content-between flex-wrap gap-3">
-                      <div class="d-flex align-items-center gap-3">
-                        <span class="bg-label-primary p-2 rounded">
-                          <i class="bx bx-laptop bx-sm"></i>
-                        </span>
-                        <div class="content-right">
-                          <p class="mb-0">Hours Spent</p>
-                          <h4 class="text-primary mb-0">34h</h4>
-                        </div>
-                      </div>
-                      <div class="d-flex align-items-center gap-3">
-                        <span class="bg-label-info p-2 rounded">
-                          <i class="bx bx-bulb bx-sm"></i>
-                        </span>
-                        <div class="content-right">
-                          <p class="mb-0">Test Results</p>
-                          <h4 class="text-info mb-0">82%</h4>
-                        </div>
-                      </div>
-                      <div class="d-flex align-items-center gap-3">
-                        <span class="bg-label-warning p-2 rounded">
-                          <i class="bx bx-check-circle bx-sm"></i>
-                        </span>
-                        <div class="content-right">
-                          <p class="mb-0">Course Completed</p>
-                          <h4 class="text-warning mb-0">14</h4>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- Hour chart End  -->
+                    <div class="card">
+                      <h5 class="card-header">Execution Time</h5>
+                      <div class="card-body">
+                        <form id="formValidationExamples" class="row g-3">
+                          <!-- Account Details -->
 
-              <!-- Topic and Instructors -->
-              <div class="row mb-4">
-                <div class="col-12">
-                  <!-- Full width column -->
-                  <div class="card h-100">
-                    <div
-                      class="card-header d-flex align-items-center justify-content-between"
-                    >
-                      <h5 class="card-title m-0 me-2">
-                        Tren Hasil Kinerja Yang Sering Diuji
-                      </h5>
-                    </div>
-                    <div class="card-body row g-3">
-                      <div class="col-md-6">
-                        <div id="horizontalBarChart"></div>
-                      </div>
-                      <div
-                        class="col-md-6 d-flex justify-content-around align-items-center"
-                      >
-                        <div>
-                          <div class="d-flex align-items-baseline">
-                            <span class="text-primary me-2"
-                              ><i class="bx bxs-circle"></i
-                            ></span>
-                            <div>
-                              <p class="mb-2">UI Design</p>
-                              <h5>35%</h5>
-                            </div>
+                          <div class="col-12">
+                            <h6 class="fw-normal">
+                              Menguji coba eksekusi waktu pada Javascript
+                            </h6>
+                            <hr class="mt-0" />
                           </div>
-                          <div class="d-flex align-items-baseline my-3">
-                            <span class="text-success me-2"
-                              ><i class="bx bxs-circle"></i
-                            ></span>
-                            <div>
-                              <p class="mb-2">Music</p>
-                              <h5>14%</h5>
-                            </div>
+                          <div class="col-md-12">
+                            <label
+                              class="form-label"
+                              for="type_test"
+                              aria-disabled="true"
+                              >Tipe Test</label
+                            >
+                            <input
+                              type="text"
+                              id="type_test"
+                              class="form-control"
+                              placeholder="Vanilla JS"
+                              name="type_test"
+                              value="execution-time"
+                              disabled="true"
+                            />
                           </div>
-                          <div class="d-flex align-items-baseline">
-                            <span class="text-danger me-2"
-                              ><i class="bx bxs-circle"></i
-                            ></span>
-                            <div>
-                              <p class="mb-2">React</p>
-                              <h5>10%</h5>
-                            </div>
+                          <div class="col-md-12">
+                            <label class="form-label" for="formValidationName"
+                              >Nama Javascript</label
+                            >
+                            <input
+                              type="text"
+                              id="formValidationName"
+                              class="form-control"
+                              placeholder="Vanilla JS"
+                              name="formValidationName"
+                            />
                           </div>
-                        </div>
+                          <div class="col-md-12">
+                            <label class="form-label" for="sumber_kode"
+                              >Sumber Kode</label
+                            >
+                            <textarea
+                              class="form-control"
+                              id="sumber_kode"
+                              name="sumber_kode"
+                              rows="3"
+                            ></textarea>
+                          </div>
+                          <div class="col-md-12">
+                            <label class="form-label" for="jumlah_eksekusi"
+                              >Jumlah Eksekusi
+                            </label>
+                            <input
+                              class="form-control"
+                              type="email"
+                              id="jumlah_eksekusi"
+                              name="jumlah_eksekusi"
+                              placeholder="Jumlah Eksekusi"
+                            />
+                          </div>
 
-                        <div>
-                          <div class="d-flex align-items-baseline">
-                            <span class="text-info me-2"
-                              ><i class="bx bxs-circle"></i
-                            ></span>
-                            <div>
-                              <p class="mb-2">UX Design</p>
-                              <h5>20%</h5>
-                            </div>
+                          <div class="col-12">
+                            <button
+                              type="submit"
+                              name="submitButton"
+                              class="btn btn-primary"
+                            >
+                              Submit
+                            </button>
                           </div>
-                          <div class="d-flex align-items-baseline my-3">
-                            <span class="text-secondary me-2"
-                              ><i class="bx bxs-circle"></i
-                            ></span>
-                            <div>
-                              <p class="mb-2">Animation</p>
-                              <h5>12%</h5>
-                            </div>
-                          </div>
-                          <div class="d-flex align-items-baseline">
-                            <span class="text-warning me-2"
-                              ><i class="bx bxs-circle"></i
-                            ></span>
-                            <div>
-                              <p class="mb-2">SEO</p>
-                              <h5>9%</h5>
-                            </div>
-                          </div>
-                        </div>
+                        </form>
                       </div>
                     </div>
                   </div>
+                  <!-- /FormValidation -->
                 </div>
+                <!--/ Pricing Plans -->
               </div>
-              <!--  Topic and Instructors  End-->
-
-              <!-- Course datatable -->
-              <div class="card mb-4">
-                <div class="table-responsive mb-3">
-                  <table class="table datatables-academy-course">
-                    <thead class="border-top">
-                      <tr>
-                        <th></th>
-                        <th></th>
-                        <th>Course Name</th>
-                        <th>Time</th>
-                        <th class="w-25">Progress</th>
-                        <th class="w-25">Status</th>
-                      </tr>
-                    </thead>
-                  </table>
-                </div>
-              </div>
-
-              <!-- Course datatable End -->
             </div>
             <!--/ Content -->
 
