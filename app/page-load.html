@@ -358,72 +358,52 @@
 
             <!-- Content -->
 
-            <div class="container-xxl flex-grow-1 container-p-y">
+            <div class="container-xxl flex-grow-1 container-p-y"><div class="container-xxl flex-grow-1 container-p-y">
               <div class="card">
                 <!-- Pricing Plans -->
                 <div class="row">
                   <!-- FormValidation -->
                   <div class="col-12">
                     <div class="card">
-                      <h5 class="card-header">Page Load Test</h5>
+                      <h5 class="card-header">Pemuatan Halaman</h5>
                       <div class="card-body">
                         <form id="formValidationExamples" class="row g-3">
                           <!-- Account Details -->
 
                           <div class="col-12">
                             <h6 class="fw-normal">
-                              Menguji coba eksekusi loading atau pemuatan
-                              Halaman pada Javascript
+                              Menguji coba Pemuatan Halaman pada Javascript
                             </h6>
                             <hr class="mt-0" />
                           </div>
+                          
                           <div class="col-md-12">
-                            <label
-                              class="form-label"
-                              for="type_test"
-                              aria-disabled="true"
-                              >Tipe Test</label
-                            >
+                            <label class="form-label" for="formValidationName">Nama Javascript</label>
                             <input
-                              type="text"
-                              id="type_test"
-                              class="form-control"
-                              placeholder="Vanilla JS"
-                              name="type_test"
-                              value="page-load"
-                              disabled="true"
+                                type="text"
+                                id="formValidationName"
+                                class="form-control"
+                                placeholder="Vanilla JS"
+                                name="formValidationName"
+                                autocomplete="off"  
                             />
+                            <div id="suggestionsDropdown" class="custom-dropdown" style="display:none;"></div>
+                        </div>
+                        <div class="col-md-12">
+                          <label class="form-label" for="sumber_kode">Sumber Kode</label>
+                          <div id="sumberKodeContainer">
+                              <textarea class="form-control mb-2" id="sumber_kode_1" name="sumber_kode" rows="3"></textarea>
                           </div>
-                          <div class="col-md-12">
-                            <label class="form-label" for="formValidationName"
-                              >Nama Javascript</label
-                            >
-                            <input
-                              type="text"
-                              id="formValidationName"
-                              class="form-control"
-                              placeholder="Vanilla JS"
-                              name="formValidationName"
-                            />
-                          </div>
-                          <div class="col-md-12">
-                            <label class="form-label" for="sumber_kode"
-                              >Sumber Kode</label
-                            >
-                            <textarea
-                              class="form-control"
-                              id="sumber_kode"
-                              name="sumber_kode"
-                              rows="3"
-                            ></textarea>
-                          </div>
+                          <button type="button" id="addMoreCode" class="btn btn-secondary">Tambah Sumber Kode</button>
+                      </div>
+                      
                           <div class="col-md-12">
                             <label class="form-label" for="jumlah_eksekusi"
                               >Jumlah Eksekusi
                             </label>
                             <input
                               class="form-control"
-                              type="email"
+                              type="number"
                               id="jumlah_eksekusi"
                               name="jumlah_eksekusi"
                               placeholder="Jumlah Eksekusi"
@@ -432,7 +412,8 @@
 
                           <div class="col-12">
                             <button
-                              type="submit"
+                              id="submitButton"
+                              type="button"
                               name="submitButton"
                               class="btn btn-primary"
                             >
@@ -441,12 +422,29 @@
                           </div>
                         </form>
                       </div>
+                      <div class="card mt-4">
+                        <div class="card-body">
+                            <h5 class="card-title">Hasil Pengujian Pemuatan Halaman </h5>
+                            <div class="execution-time-container">
+                                <div class="execution-time-info">
+                                    <span class="execution-time-label">Rata Rata Hasil Pemuatan Halaman :</span>
+                                    <span class="execution-time-value" id="averageExecutionTime">-</span>
+                                </div>
+                                <div class="execution-time-bar-container">
+                                    <div id="executionTimeProgressBar" class="execution-time-progress-bar"></div>
+                                </div>
+                            </div>
+                            <div class="charts-container" id="chartsContainer">
+                            </div>
+                    </div>
+                    
                     </div>
                   </div>
                   <!-- /FormValidation -->
                 </div>
                 <!--/ Pricing Plans -->
               </div>
+            </div>
             </div>
             <!--/ Content -->
 
@@ -502,7 +500,12 @@
     <script src="../../assets/vendor/libs/typeahead-js/typeahead.js"></script>
     <script src="../../assets/vendor/js/menu.js"></script>
     <script type="module" src="../js/informasi-diri.js"></script>
-    <!-- endbuild -->
+    <!-- wajib import dibawah ini -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../js/javascript-type.js"></script>
+    <script type="module" src="../js/page-load/page-load.js"></script>
+    <script type="module" src="../js/page-load/tambah-sumber-kode.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Vendors JS -->
     <script src="../../assets/vendor/libs/moment/moment.js"></script>
