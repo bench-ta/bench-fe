@@ -87,6 +87,11 @@
     <script src="../../assets/vendor/js/template-customizer.js"></script>
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../../assets/js/config.js"></script>
+    <style>
+
+
+
+    </style>
   </head>
 
   <body>
@@ -404,86 +409,22 @@
               <!-- Topic and Instructors -->
               <div class="row mb-4">
                 <div class="col-12">
-                  <!-- Full width column -->
-                  <div class="card h-100">
-                    <div
-                      class="card-header d-flex align-items-center justify-content-between"
-                    >
-                      <h5 class="card-title m-0 me-2">
-                        Tren Hasil Kinerja Yang Sering Diuji
-                      </h5>
-                    </div>
-                    <div class="card-body row g-3">
-                      <div class="col-md-6">
-                        <div id="horizontalBarChart"></div>
-                      </div>
-                      <div
-                        class="col-md-6 d-flex justify-content-around align-items-center"
-                      >
-                        <div>
-                          <div class="d-flex align-items-baseline">
-                            <span class="text-primary me-2"
-                              ><i class="bx bxs-circle"></i
-                            ></span>
-                            <div>
-                              <p class="mb-2">UI Design</p>
-                              <h5>35%</h5>
-                            </div>
-                          </div>
-                          <div class="d-flex align-items-baseline my-3">
-                            <span class="text-success me-2"
-                              ><i class="bx bxs-circle"></i
-                            ></span>
-                            <div>
-                              <p class="mb-2">Music</p>
-                              <h5>14%</h5>
-                            </div>
-                          </div>
-                          <div class="d-flex align-items-baseline">
-                            <span class="text-danger me-2"
-                              ><i class="bx bxs-circle"></i
-                            ></span>
-                            <div>
-                              <p class="mb-2">React</p>
-                              <h5>10%</h5>
-                            </div>
-                          </div>
+                    <div class="card h-100">
+                        <div class="card-header d-flex align-items-center justify-content-between">
+                            <h5 class="card-title m-0 me-2">Tren Hasil Kinerja Yang Sering Diuji</h5>
                         </div>
-
-                        <div>
-                          <div class="d-flex align-items-baseline">
-                            <span class="text-info me-2"
-                              ><i class="bx bxs-circle"></i
-                            ></span>
-                            <div>
-                              <p class="mb-2">UX Design</p>
-                              <h5>20%</h5>
+                        <div class="card-body row g-3">
+                            <div class="col-md-6">
+                                <canvas id="horizontalBarChart"></canvas>
                             </div>
-                          </div>
-                          <div class="d-flex align-items-baseline my-3">
-                            <span class="text-secondary me-2"
-                              ><i class="bx bxs-circle"></i
-                            ></span>
-                            <div>
-                              <p class="mb-2">Animation</p>
-                              <h5>12%</h5>
+                            <div class="col-md-6 d-flex justify-content-around align-items-center">
+                              <div id="percentageStats" class="d-flex flex-wrap justify-content-around"></div>
                             </div>
-                          </div>
-                          <div class="d-flex align-items-baseline">
-                            <span class="text-warning me-2"
-                              ><i class="bx bxs-circle"></i
-                            ></span>
-                            <div>
-                              <p class="mb-2">SEO</p>
-                              <h5>9%</h5>
-                            </div>
-                          </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
                 </div>
-              </div>
+            </div>
+            
               <!--  Topic and Instructors  End-->
 
               <!-- Course datatable -->
@@ -561,6 +502,9 @@
     <script src="../../assets/vendor/js/menu.js"></script>
     <script type="module" src="../js/informasi-diri.js"></script>
     <!-- endbuild -->
+    <script type="module" src="../js/tren-uji.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Vendors JS -->
     <script src="../../assets/vendor/libs/moment/moment.js"></script>
