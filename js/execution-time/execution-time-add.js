@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const buttonSubmit = document.getElementById('submitButton');
     const loadingSpinner = document.querySelector('.loading-spinner');
-    
+    const token = localStorage.getItem('token');
+
     buttonSubmit.addEventListener('click', function (event) {
         event.preventDefault();
 
@@ -9,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const allSumberKode = document.querySelectorAll('[name="sumber_kode"]');
         const sumberKodeValues = Array.from(allSumberKode).map(textarea => textarea.value);
         const iterations = document.getElementById('jumlah_eksekusi').value;
-        const token = localStorage.getItem('token');
 
         const data = {
             testType: "Execution Time Test",
@@ -27,7 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-            },
+                'Authorization': `Bearer ${token}`            
+        },
             body: JSON.stringify(data)
         })
         .then(response => {
