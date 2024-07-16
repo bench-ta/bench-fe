@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Retrieve user data from localStorage
   const email = localStorage.getItem("email");
-  const username = localStorage.getItem("fullname");
+  const username = localStorage.getItem("fullName");
 
   const usernameFromCookie = decodeURIComponent(
     document.cookie.replace(
@@ -13,5 +13,5 @@ document.addEventListener("DOMContentLoaded", function () {
   // Update the document content
   document.querySelector(".fw-medium").textContent = username;
   document.querySelector("small").textContent = email;
-  document.querySelector("h3").textContent = `Welcome back, ${username} 👋🏻`;
+  document.querySelector("h3").textContent = `Welcome back, ${username} 👋🏻` || "";
 });

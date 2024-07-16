@@ -256,14 +256,15 @@
                     </li>
                     <li>
                       <a
-                        class="dropdown-item"
-                        href="../index.html"
-                        target="_blank"
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          id="logout-button"
                       >
-                        <i class="bx bx-power-off me-2"></i>
-                        <span class="align-middle">Log Out</span>
+                          <i class="bx bx-power-off me-2"></i>
+                          <span class="align-middle">Log Out</span>
                       </a>
-                    </li>
+                  </li>
+                  
                   </ul>
                 </li>
                 <!--/ User -->
@@ -299,19 +300,19 @@
               <div class="container-xxl d-flex h-100">
                 <ul class="menu-inner">
                   <!-- Dashboards -->
-                  <li class="menu-item">
-                    <a href="javascript:void(0)" class="menu-link menu-toggle">
+                  <li class="menu-item  ">
+                    <a href="dashboard.html" class="menu-link ">
                       <i class="menu-icon tf-icons bx bx-home-circle"></i>
                       <div data-i18n="Dashboards">Dashboards</div>
                     </a>
-                    <ul class="menu-sub">
+                    <!-- <ul class="menu-sub">
                       <li class="menu-item active">
                         <a href="dashboard.html" class="menu-link">
                           <i class="menu-icon tf-icons bx bx-book-open"></i>
                           <div data-i18n="Dashboard">Dashboard</div>
                         </a>
                       </li>
-                    </ul>
+                    </ul> -->
                   </li>
 
                   <!-- Benchmarking -->
@@ -326,6 +327,46 @@
                         <a href="execution-time.html" class="menu-link">
                           <i class="menu-icon tf-icons bx bx-menu"></i>
                           <div data-i18n="Execution Time">Execution Time</div>
+                        </a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="memory-usage.html" class="menu-link" target="_blank">
+                          <i
+                            class="menu-icon tf-icons bx bx-vertical-center"
+                          ></i>
+                          <div data-i18n="Memory Usage">Memory Usage</div>
+                        </a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="asyncronous-benchmark.html" class="menu-link">
+                          <i class="menu-icon tf-icons bx bx-fullscreen"></i>
+                          <div data-i18n="Asyncronous Benchmark">
+                            Asyncronous Benchmark
+                          </div>
+                        </a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="" class="menu-link">
+                          <i
+                            class="menu-icon tf-icons bx bx-exit-fullscreen"
+                          ></i>
+                          <div data-i18n="Page Load">Page Load</div>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li class="menu-item">
+                    <a href="javascript:void(0)" class="menu-link menu-toggle">
+                      <i class="menu-icon tf-icons bx bx-bulb"></i>
+                      <div data-i18n="Hasil">Hasil</div>
+                    </a>
+
+                    <ul class="menu-sub">
+                      <li class="menu-item">
+                        <a href="result-executiontime.html" class="menu-link">
+                          <i class="menu-icon tf-icons bx bx-menu"></i>
+                          <div data-i18n="Hasil Execution Time">Hasil Execution Time</div>
                         </a>
                       </li>
                       <li class="menu-item">
@@ -434,11 +475,9 @@
                     <thead class="border-top">
                       <tr>
                         <th></th>
-                        <th></th>
-                        <th>Course Name</th>
-                        <th>Time</th>
-                        <th class="w-25">Progress</th>
-                        <th class="w-25">Status</th>
+                        <th>Nama User Testing</th>
+                        <th>Apa Yang Diuji</th>
+                        <th >Hasil</th>
                       </tr>
                     </thead>
                   </table>
@@ -501,6 +540,8 @@
     <script src="../../assets/vendor/libs/typeahead-js/typeahead.js"></script>
     <script src="../../assets/vendor/js/menu.js"></script>
     <script type="module" src="../js/informasi-diri.js"></script>
+    <script type="module" src="../js/logout.js"></script>
+
     <!-- endbuild -->
     <script type="module" src="../js/tren-uji.js"></script>
 

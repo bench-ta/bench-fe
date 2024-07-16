@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (data.status === 200) {
           localStorage.setItem("token", data.data.token);
           document.cookie = `token=${data.data.token}; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
-          localStorage.setItem("fullname", data.data.user.fullname);
-          document.cookie = `fullname=${data.data.user.fullname}; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
+          localStorage.setItem("fullName", data.data.user.fullName);
+          document.cookie = `fullName=${data.data.user.fullName}; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
           localStorage.setItem("email", data.data.user.email);
           document.cookie = `email=${data.data.user.email}; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
 
