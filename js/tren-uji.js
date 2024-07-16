@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('http://localhost:3000/api/count-js')
+    fetch('http://localhost:3000/api/aggregation')
     .then(response => response.json())
     .then(data => {
         if (data.success) {
