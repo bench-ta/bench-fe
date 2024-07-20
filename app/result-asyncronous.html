@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="light-style layout-menu-fixed layout-compact" dir="ltr" data-theme="theme-default" data-assets-path="../../assets/" data-template="horizontal-menu-template">
-  <head>
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
     <title>Benchmarking Javascript | Dashboard</title>
@@ -12,7 +12,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
 
     <!-- Icons -->
     <link rel="stylesheet" href="../../assets/vendor/fonts/boxicons.css" />
@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="../../assets/vendor/libs/apex-charts/apex-charts.css" />
 
     <!-- Page CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css" />
 
     <!-- Helpers -->
     <script src="../../assets/vendor/js/helpers.js"></script>
@@ -76,9 +77,9 @@
             margin-top: 20px;
         }
   </style>
-  </head>
+</head>
 
-  <body>
+<body>
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-navbar-full layout-horizontal layout-without-menu">
       <div class="layout-container">
@@ -106,12 +107,10 @@
                         <span class="align-middle"><i class="bx bx-sun me-2"></i>Light</span>
                       </a>
                     </li>
-                    <li>
                       <a class="dropdown-item" href="javascript:void(0);" data-theme="dark">
                         <span class="align-middle"><i class="bx bx-moon me-2"></i>Dark</span>
                       </a>
                     </li>
-                    <li>
                       <a class="dropdown-item" href="javascript:void(0);" data-theme="system">
                         <span class="align-middle"><i class="bx bx-desktop me-2"></i>System</span>
                       </a>
@@ -146,10 +145,14 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="auth-login-cover.html" target="_blank">
-                        <i class="bx bx-power-off me-2"></i>
-                        <span class="align-middle">Log Out</span>
-                      </a>
+                        <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            id="logout-button"
+                        >
+                            <i class="bx bx-power-off me-2"></i>
+                            <span class="align-middle">Log Out</span>
+                        </a>
                     </li>
                   </ul>
                 </li>
@@ -219,6 +222,7 @@
                           <div data-i18n="Page Load">Page Load</div>
                         </a>
                       </li>
+                      
                     </ul>
                   </li>
                   <li class="menu-item">
@@ -251,11 +255,11 @@
                         </a>
                       </li>
                       <li class="menu-item">
-                        <a href="page-load.html" class="menu-link">
+                        <a href="result-pageload.html" class="menu-link">
                           <i
                             class="menu-icon tf-icons bx bx-exit-fullscreen"
                           ></i>
-                          <div data-i18n="Hasil Page Load">Page Load</div>
+                          <div data-i18n="Page Load">Page Load</div>
                         </a>
                       </li>
                     </ul>
@@ -267,71 +271,7 @@
 
            <!-- Content -->
            <div class="container-xxl flex-grow-1 container-p-y">
-            <div class="card">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <h5 class="card-header">Asyncronous-benchmark</h5>
-                            <div class="card-body">
-                                <form id="formValidationExamples" class="row g-3">
-                                    <div class="col-12">
-                                        <h6 class="fw-normal">Menguji coba asyncronous-benchmark pada Javascript</h6>
-                                        <hr class="mt-0"/>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <label class="form-label" for="formValidationName">Nama Javascript</label>
-                                        <input type="text" id="formValidationName" class="form-control" placeholder="Vanilla JS"
-                                               name="formValidationName" autocomplete="off"/>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <label class="form-label" for="sumber_kode">Sumber Kode</label>
-                                        <div id="sumberKodeContainer">
-                                            <textarea class="form-control mb-2" id="sumber_kode_1" name="sumber_kode"
-                                                      rows="3"></textarea>
-                                        </div>
-                                        <button type="button" id="addMoreCode" class="btn btn-secondary">Tambah Sumber Kode
-                                        </button>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <label class="form-label" for="jumlah_eksekusi">Jumlah Eksekusi</label>
-                                        <input class="form-control" type="number" id="jumlah_eksekusi" name="jumlah_eksekusi"
-                                               placeholder="Jumlah Eksekusi"/>
-                                    </div>
-                                    <div class="col-12">
-                                        <button id="submitButton" type="button" name="submitButton" class="btn btn-primary">
-                                            Submit
-                                        </button>
-                                    </div>
-                                </form>
-                                <div class="loading-spinner text-center">
-                                  <div class="spinner-border text-primary" role="status">
-                                      <span class="sr-only">Loading...</span>
-                                  </div>
-                                  <p>Processing...</p>
-                              </div>
-                            </div>
-                            <div class="card mt-4">
-                                <div class="card-body">
-                                    <h5 class="card-title">Hasil asyncronous-benchmark </h5>
-                                    <div class="execution-time-container">
-                                        <div class="execution-time-info">
-                                            <span class="execution-time-label">Rata Rata Hasil asyncronous-benchmark :</span>
-                                            <span class="execution-time-value" id="averageExecutionTime">-</span>
-                                        </div>
-                                        <div class="progress">
-                                            <div id="executionTimeProgressBar" class="progress-bar" role="progressbar"
-                                                 aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
-                                    <div class="charts-container" id="chartsContainer"></div>
-                                    <div id="hardwareInfoContainer" class="mt-4"></div>
-                                    <div id="complexityInfoContainer" class="mt-4"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div id="benchmarkResults"></div>
         </div>
           <!--/ Content -->
 
@@ -382,9 +322,10 @@
     <script src="../../assets/vendor/libs/typeahead-js/typeahead.js"></script>
     <script src="../../assets/vendor/js/menu.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script type="module" src="../js/javascript-type.js"></script>
-    <script type="module" src="../js/asyncronous-benchmark/asyncronous-benchmark.js"></script>
-    <script type="module" src="../js/asyncronous-benchmark/tambah-sumber-kode.js"></script>
+    <script type="module" src="../js/asyncronous-benchmark/get-asyncronous.js"></script>
+    
+    <script type="module" src="../js/informasi-diri.js"></script>
+    <script type="module" src="../js/logout.js"></script>
     <!-- endbuild -->
     <!-- Vendors JS -->
     <script src="../../assets/vendor/libs/moment/moment.js"></script>
@@ -394,5 +335,3 @@
     <script src="../../assets/js/main.js"></script>
     <!-- Page JS -->
     <script src="../../assets/js/app-academy-dashboard.js"></script>
-  </body>
-</html>
